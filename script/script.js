@@ -27,4 +27,4 @@ function operate(operator, x, y) {
     }
 
     return value;
-}
+} 

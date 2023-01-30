@@ -1,0 +1,97 @@
+body {
+    background: linear-gradient(180deg, grey, black);
+}
+.calculator {
+    background: grey;
+    width: 300px;
+    height: 405px;
+    border: 3px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: 2px 2px 100px black;
+    border-radius: 5px;
+    margin: 10% 0 0 40%;
+}
+
+.display {
+    background: darkgrey;
+    width: 300px;
+    height: 80px;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    text-align: end;
+}
+
+.content {
+    padding-top: 10px;
+    padding-right: 5px;
+    max-width: 340px;
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 37%; 
+    scale: 2.8;
+    margin-left: 37.5%;
+    margin-top: 35.5%;
+}
+
+.numbers * button { 
+    border: 1px solid black;
+}
+.numbers * button:hover {
+    box-shadow: 0 0 2px black;
+}
+
+.numbers .first .clear:hover {
+    color: red;
+    box-shadow: 0 0 2px red;
+}
+.first .clear {
+    padding: 3px 2px 2px 2px;
+    font-size: 11px;
+}
+.first .percent {
+    padding-right: 3px;
+    padding-left: 5px;
+}
+.first .divide {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.first .multiply {
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+.second .add {
+    padding-right: 5.5px;
+    padding-left: 5.5px;
+}
+
+.third .subtract {
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+.fourth .equals {
+    position: absolute;
+    margin-left: 3.5px;
+    padding: 12.5px 5.5px 12.5px 5.5px;
+}
+.fourth .equals:hover {
+    box-shadow: 0 0 2.5px green;
+    color: green;
+}
+.fifth .zero {
+    padding-left: 19px;
+    padding-right: 19px;
+}
+.fifth .dot {
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+}

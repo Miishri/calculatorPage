@@ -12,19 +12,17 @@ function divide(x, y) {
 }
 
 
-
 function operate(operator, x, y) {
     let value;
     
-    if (operator === "/") {
+    if (operator == "/") {
         value = divide(x, y);
-    }else if (operator === "*") {
+    }else if (operator == "*") {
         value = multiply(x, y);
-    }else if (operator === "-") {
+    }else if (operator == "-") {
         value = subtract(x, y);
-    }else if (operate === "+") {
+    }else if (operate == "+") {
         add(x, y);
     }
-
     return value;
-} 
+}

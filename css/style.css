@@ -21,7 +21,12 @@ body {
     border-bottom-right-radius: 2px;
     text-align: end;
 }
-
+.solution {
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 5px;
+    text-align: end;
+}
 .content {
     padding-top: 10px;
     padding-right: 5px;
@@ -56,16 +61,16 @@ body {
     font-size: 11px;
 }
 .first .percent {
-    padding-right: 3px;
-    padding-left: 5px;
+    padding-right: 4px;
+    padding-left: 4px;
 }
 .first .divide {
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 7.8px;
+    padding-left: 7.8px;
 }
 .first .multiply {
-    padding-right: 7px;
-    padding-left: 7px;
+    padding-right: 6.8px;
+    padding-left: 6.8px;
 }
 
 .second .add {

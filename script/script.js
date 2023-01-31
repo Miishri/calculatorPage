@@ -26,3 +26,15 @@ function operate(operator, x, y) {
     }
     return value;
 }
+
+const display = document.getElementById("value");
+const solutionDisplay = document.getElementById("solution");
+
+
+function populateDisplay(value) {
+    if (display.textContent.length != 20) {
+        current = value;   
+        display.innerText += value;
+        console.log(current);
+    }
+}

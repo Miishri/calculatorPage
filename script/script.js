@@ -1,5 +1,4 @@
 function add(x, y) {
-
     return x + y;
 }
 function subtract(x, y) {
@@ -15,23 +14,25 @@ function divide(x, y) {
 
 function operate(operator, x, y) {
     let value;
-    
-    if (operator == "/") {
-        value = divide(x, y);
-    }else if (operator == "*") {
-        value = multiply(x, y);
-    }else if (operator == "-") {
-        value = subtract(x, y);
-    }else if (operate == "+") {
-        add(x, y);
+    switch (operator) {
+        case "/": 
+            value = divide(x, y);
+            break;
+        case "*":
+            value = multiply(x, y);
+            break;
+        case "+":
+            value = add(x, y);
+            break;
+        case "-":
+            value = subtract(x, y);
+            break;
+        default:
+            console.log("ERROR IN FUNCTION OPERATE");    
     }
     return value;
 }
 
-const display = document.getElementById("value");
-const solutionDisplay = document.getElementById("solution");
-let operations = [];
-let op = [];
 
 const numbers = document.querySelectorAll(".num"); // number buttons
 numbers.forEach(button => {
@@ -49,31 +50,39 @@ operators.forEach(operator => {
 
 const clear = document.querySelector(".clear"); //clear button
 clear.addEventListener('click', () => {
-    display.innerText = "";
-    solutionDisplay.innerText = "";
+    display.innerText = '';
+    solutionDisplay.innerText = '';
 });
 
 const equals = document.querySelector(".equals"); // equals button
-equals.addEventListener('click', () => {
-    let numberOne = "";
-    console.log("equals");
+equals.addEventListener('click', () => { 
+    if (checkWhich(currentValue)) {
+        console.log(operations); // test
+    }
 })
 
-let once = false;
+function checkWhich(value) {
+    return value != "/" && value != "*" && value != "-" && value != "+" && value != "%";
+}
+
+let operations = [];
+const display = document.getElementById("value");
+const solutionDisplay = document.getElementById("solution"); 
+
+let check = false;
+let currentValue = ''; 
 function populateDisplay(value) {
-    if (display.textContent.length != 20) {
-        current = value;   
-        if (value != "/" && value != "*" && value != "-" && value != "+" && value != "%") {
-            operations.push(value);
+    if (display.innerText.length != 20) {
+        if (checkWhich(value)) { 
             display.innerText += value;
-            once = true;
-        }else if (once) {
-            operations.push(value);
-            op.push(value);
+            console.log("i work more than once"); // test
+            check = true;
+            currentValue = value; 
+        }else if (check) {
             display.innerText += value;
-            once = false;
+            check = false;
+            currentValue = value; 
+            console.log("i work after number"); // test
         }
-        console.log(operations);
-        console.log(op);
     }
 }
